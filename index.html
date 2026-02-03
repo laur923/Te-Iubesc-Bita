@@ -1,0 +1,88 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>10.08.2025</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .column {
+            background-color: #ffcce6;
+            border-radius: 10px;
+            padding: 10px;
+            min-height: 200px;
+        }
+
+        .item {
+            margin: 3px 0;
+        }
+
+        .img-bottom {
+            margin-top: 40px;
+            width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>"10.08.2025" Data când am făcut cea mai bună alegere</h1>
+    <p class="subtitle">Te iubesc azi, mâine și în fiecare zi. Happy Valentine's Day! ❤️</p>
+
+    <div class="container">
+        <div class="column" id="col1"></div>
+        <div class="column" id="col2"></div>
+        <div class="column" id="col3"></div>
+    </div>
+
+    <img class="img-bottom" src="https://i.ibb.co/zhkdgwXS/image.png" alt="Imagine">
+
+    <!-- A DOUA POZĂ, JOS DE TOT -->
+    <img class="img-bottom" src="https://i.ibb.co/j95w0NDL/image.png" alt="Imagine 2">
+
+    <script>
+        const total = 100;
+        const col1Count = 33;
+        const col2Count = 34;
+        const col3Count = 33;
+
+        function adaugaMesaje(idColoana, numar) {
+            const col = document.getElementById(idColoana);
+            for (let i = 0; i < numar; i++) {
+                const p = document.createElement("p");
+                p.className = "item";
+                p.textContent = "Te iubesc ❤️";
+                col.appendChild(p);
+            }
+        }
+
+        adaugaMesaje("col1", col1Count);
+        adaugaMesaje("col2", col2Count);
+        adaugaMesaje("col3", col3Count);
+    </script>
+</body>
+</html>
